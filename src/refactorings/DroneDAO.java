@@ -33,12 +33,16 @@ public class DroneDAO {
     }
     
     public List<Drone> obtenerDrones(){
+        TipoDrone tipoDrone1 = new TipoDrone(1l, "Tipo Drone 1");
+        TipoDrone tipoDrone2 = new TipoDrone(2l, "Tipo Drone 2");
+        TipoDrone tipoDrone3 = new TipoDrone(3l, "Tipo Drone 3");
+        
         List<Drone> drones = new ArrayList<Drone>();
-        Drone drone1 = new Drone(1l, "12/12/2014", 10);
-        Drone drone2 = new Drone(2l, "12/01/2015", 15);
-        Drone drone3 = new Drone(3l, "12/02/2015", 12);
-        Drone drone4 = new Drone(4l, "12/03/2015", 11);
-        Drone drone5 = new Drone(5l, "12/05/2015", 9);
+        Drone drone1 = new Drone(1l, "12/12/2014", 10, tipoDrone1);
+        Drone drone2 = new Drone(2l, "12/01/2015", 15, tipoDrone2);
+        Drone drone3 = new Drone(3l, "12/02/2015", 12, tipoDrone3);
+        Drone drone4 = new Drone(4l, "12/03/2015", 11, tipoDrone2);
+        Drone drone5 = new Drone(5l, "12/05/2015", 9, tipoDrone1);
         
         drones.add(drone1);
         drones.add(drone2);

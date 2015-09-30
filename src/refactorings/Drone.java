@@ -4,11 +4,13 @@ public class Drone {
     private long id;
     private String fechaCompra;
     private int stock;
+    private TipoDrone tipoDrone;
 
-    public Drone(long id, String fechaCompra, int stock) {
+    public Drone(long id, String fechaCompra, int stock, TipoDrone tipoDrone) {
         this.id = id;
         this.fechaCompra = fechaCompra;
         this.stock = stock;
+        this.tipoDrone = tipoDrone;
     }
 
     public long getId() {
@@ -33,6 +35,14 @@ public class Drone {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public TipoDrone getTipoDrone() {
+        return tipoDrone;
+    }
+
+    public void setTipoDrone(TipoDrone tipoDrone) {
+        this.tipoDrone = tipoDrone;
     }
     
     
