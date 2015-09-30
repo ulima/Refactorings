@@ -22,12 +22,14 @@ public class Refactorings {
         // miden 50 cm. Si son de tipo 2 miden 70cm. Si son del tipo 3
         // miden 60 cm.
         
-        List<Drone> drones = DroneDAO.getInstance().obtenerDrones();
+        /*List<Drone> drones = DroneDAO.getInstance().obtenerDrones();
         List<TipoDrone> tipoDrones = DroneDAO.getInstance().obtenerTipoDrones();
         
         int tamano = new Refactorings().calcularEspacioAlmacen(drones, tipoDrones);
         
-        System.out.println("El tamano necesario es de " + tamano);
+        System.out.println("El tamano necesario es de " + tamano);*/
+        
+        new Refactorings().calcular();
     }
     
     
@@ -55,6 +57,24 @@ public class Refactorings {
         }else{
             return 0;
         }
+    }
+    
+    
+    private void calcular(){
+        int operando1 = 3;
+        int operando2 = 6;
+        int total = operar(operando1, operando2);
+        
+        System.out.println("Operando1: " + operando1);
+        System.out.println("Operando2: " + operando2);
+        System.out.println("Total: " + total);
+    }
+    
+    private int operar (int operando1, int operando2){
+        int suma = operando1 + operando2;
+        operando1 = operando1 + 2;
+        
+        return suma;
     }
     
 }
