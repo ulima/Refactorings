@@ -47,13 +47,10 @@ public class Refactorings {
     // Aplicar tecnica de Refactoring: Replace temp with Query 
     private int calcularEspacioDrone(Drone drone){
         if (drone.getTipoDrone().getId() == 1) {
-            int stock = drone.getStock();
-            return stock * 50;
+            return drone.getStock() * 50;
         } else if (drone.getTipoDrone().getId() == 2) {
-            int stock = drone.getStock();
             return drone.getStock() * 70;
         } else if (drone.getTipoDrone().getId() == 3) {
-            int stock = drone.getStock();
             return drone.getStock() * 60;
         }else{
             return 0;
